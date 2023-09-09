@@ -49,6 +49,38 @@
   justify-content: space-between;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__block {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.footer__content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  padding: 40px 0px;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 14px;
+}
+
+.footer__content--title {
+  color: #1d1d1f;
+  font-weight: 600;
+}
+
+.content--links {
+  color: #424245;
+  font-weight: 400;
+  color: #000;
+}
+
 .header__block {
   display: flex;
   gap: 32px;
@@ -185,6 +217,11 @@
 .product--iphone {
   background-image: url(/img/iphone.png);
   background-color: #fafafa;
+}
+
+.product--iwatch {
+  background-image: url(/img/iwatch.png);
+  background-color: #000000;
 }
 
 .product--trade-in {

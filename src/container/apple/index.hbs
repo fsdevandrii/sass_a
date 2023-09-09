@@ -61,7 +61,23 @@
   </section>
   {{/with}}
 
-  {{!-- Секции блоков --}}
+  {{#with iwatch}}
+  <section class="product product-big product--iwatch product--dark product--top">
+    <div class="product__content">
+      <h1 class="product__title">{{title}}</h1>
+      <p class="product__description">{{descriptions}}</p>
+      <div class="product__action">
+        {{#with link}}
+        {{#each text}}
+        <a href="{{../link}}" class="product__link">{{this}}</a>
+        {{/each}}
+        {{/with}}
+      </div>
+    </div>
+  </section>
+  {{/with}}
+
+  {{!-- Секции блоков 2 в ряд --}}
   <div class="section__double">
 
     <div>
@@ -164,7 +180,25 @@
 
   </div>
 
+  <footer class="footer">
+    <div class="footer__block">
 
+      {{#each footer}}
+      <div class="footer__content">
+        <div class="footer__content--title">
+          {{title}}
+        </div>
+        {{#each links}}
+        <div class="footer__content--links">
+          <a class="content--links" href="{{url}}">{{text}}</a>
+        </div>
+        {{/each}}
+      </div>
+      {{/each}}
+
+    </div>
+
+  </footer>
 
 </div>
 
