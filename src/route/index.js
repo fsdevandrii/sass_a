@@ -121,7 +121,7 @@ router.get('/apple', function (req, res) {
       },
     },
     card: {
-      title: 'card',
+      title: 'Сard',
       descriptions:
         'Get up to 3% Daily Cash back with every purchase.',
       link: {

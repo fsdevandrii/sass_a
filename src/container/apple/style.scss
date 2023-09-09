@@ -72,7 +72,20 @@
 }
 
 .product-big {
-  min-height: 700px;
+  max-height: 700px;
+  height: 100vh;
+
+  background-size: cover;
+
+  @media all and (width < s.screen('tablet')) {
+    background-size: 150%;
+
+    max-height: 500px;
+  }
+}
+
+.product-small {
+  max-height: 580px;
   height: 100vh;
 
   background-size: cover;
@@ -115,24 +128,29 @@
 }
 
 $poductImage: (
-  'iphone-pro' '/img/iphone_pro.png',
-  'iphone' '/img/iphone.png'
+  'iphone-pro' '/img/iphone_pro.png' #000000,
+  'iphone' '/img/iphone.png' #fafafa,
+  'trade-in' '/img/trade_in.png' #fbfbfd,
+  'conference' '/img/conference.png' #000,
+  'ipad' '/img/ipad.png' #fbfbfd,
+  'small-business' '/img/small_business.png' #000,
+  'gift' '/img/gift.png' #fbfbfd,
+  'card' '/img/card.png' #fbfbfd
 );
 
-@each $class, $url in $poductImage {
+@each $class, $url, $color in $poductImage {
   .product--#{$class} {
-    background-image: url(#{url});
+    background-image: url(#{$url});
+    background-color: $color;
   }
 }
 
-// .product--iphone-pro {
-//   background-image: url(/img/iphone_pro.png);
-// }
+.product-small {
+  .product__title {
+    font-size: 40px;
+  }
 
-// @media all and (width < s.screen('tablet')) {
-//   background-size: 150%;
-// }
-
-// .product--iphone {
-//   background-image: url(/img/iphone.png);
-// }
+  .product__description {
+    font-size: 20px;
+  }
+}
