@@ -193,3 +193,27 @@ $poductImage: (
     font-size: 20px;
   }
 }
+
+.header__white {
+  @extend .section;
+  background-color: #fff;
+}
+
+.header__white__content {
+  @extend .section__content;
+
+  display: flex;
+  padding: s.space(4) 0;
+  justify-content: space-between;
+
+  font-size: 14px;
+}
+
+.header__white--title {
+  display: flex;
+  color: s.color('fontDark');
+}
+
+.header__white--product {
+  display: flex;
+}

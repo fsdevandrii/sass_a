@@ -22,12 +22,30 @@
         <img src="/svg/search.svg" alt="Search" class="header__icon">
         <img src="/svg/profile.svg" alt="Profile" class="header__icon">
       </div>
-
-
     </header>
     {{/with}}
 
   </div>
+
+
+  {{!-- --- Вторая шапка с продажей --- --}}
+  <div>
+    {{#with header.ad}}
+    <div class="header__white">
+      <div class="header__white__content">
+        <div class="header__white--title">
+          <div>{{title}}</div>
+        </div>
+        <div class="header__white--product">
+          <a class="product__link" href="{{link.url}}">{{link.text}}</a>
+        </div>
+      </div>
+    </div>
+    {{/with}}
+  </div>
+
+
+  {{!-- ------ Основные блоки ------ --}}
 
   {{#with iphone_pro}}
   <section class="product product-big product--iphone-pro product--dark product--top">
@@ -77,7 +95,9 @@
   </section>
   {{/with}}
 
-  {{!-- Секции блоков 2 в ряд --}}
+
+  {{!-- ----- Блокы в две колонкы ----- --}}
+
   <div class="section__double">
 
     <div>
@@ -179,6 +199,8 @@
     </div>
 
   </div>
+  {{!-- --------========------- --}}
+
 
   <footer class="footer">
     <div class="footer__block">
